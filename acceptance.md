@@ -60,13 +60,25 @@
 - [x] build_ingress_entry creates proper ingress rule dict from route config
 - [x] Ingress entries include hostname, service, and originRequest settings
 
-## Task 5: DNS Record Management
+## Task 5: DNS Record Management (COMPLETED)
 
 ### Acceptance Criteria
-- [ ] create_dns_record creates CNAME record pointing to tunnel
-- [ ] find_dns_record finds existing CNAME for hostname in zone
-- [ ] update_dns_record updates existing record to point to correct tunnel
-- [ ] delete_dns_record removes DNS record by ID
-- [ ] DNS content format is "{tunnel_id}.cfargotunnel.com"
-- [ ] Record is created with proxied=true and TTL=1 (auto)
-- [ ] Returns record ID on successful creation
+- [x] create_dns_record creates CNAME record pointing to tunnel
+- [x] find_dns_record finds existing CNAME for hostname in zone
+- [x] update_dns_record updates existing record to point to correct tunnel
+- [x] delete_dns_record removes DNS record by ID
+- [x] DNS content format is "{tunnel_id}.cfargotunnel.com"
+- [x] Record is created with proxied=true and TTL=1 (auto)
+- [x] Returns record ID on successful creation
+
+## Task 6: State Manager
+
+### Acceptance Criteria
+- [ ] save_state persists rules, access groups, and agents to JSON file
+- [ ] load_state reads and populates state from JSON file
+- [ ] State includes managed_rules dict keyed by hostname|path
+- [ ] State includes access_groups dict keyed by group ID
+- [ ] State includes agents dict keyed by agent ID
+- [ ] State can be accessed via thread-safe get/set operations
+- [ ] load_state handles missing file gracefully (empty state)
+- [ ] State file path is configurable via settings

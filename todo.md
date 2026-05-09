@@ -8,8 +8,8 @@ Build the core infrastructure first (configuration, Cloudflare API client), then
 - [x] Task 2: Implement Cloudflare API client with authentication, request handling, zone lookup, and retry logic for tunnel and DNS operations
 - [x] Task 3: Implement Docker label parser that extracts tunnel configuration (hostname, service, access policies) from container labels with validation
 - [x] Task 4: Implement tunnel management that creates, finds, and configures Cloudflare Tunnels via API with ingress rule building
-- [>] Task 5: Implement DNS record management for creating, updating, and deleting CNAME records pointing to tunnel endpoints
-- [ ] Task 6: Implement state manager for persisting and loading tunnel rules, access groups, and agents with encryption support
+- [x] Task 5: Implement DNS record management for creating, updating, and deleting CNAME records pointing to tunnel endpoints
+- [>] Task 6: Implement state manager for persisting and loading tunnel rules, access groups, and agents with encryption support
 - [ ] Task 7: Implement Cloudflare Access manager for creating and managing Access applications and policies from container labels
 - [ ] Task 8: Implement Docker event handler that monitors container lifecycle events (start/stop/die) and triggers rule updates
 - [ ] Task 9: Implement reconciliation engine that compares desired state from containers with Cloudflare state and applies changes
