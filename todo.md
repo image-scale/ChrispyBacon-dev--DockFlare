@@ -16,5 +16,5 @@ Build the core infrastructure first (configuration, Cloudflare API client), then
 - [x] Task 10: Implement cache layer with Redis and in-memory fallback for DNS records, zone data, and API responses
 - [x] Task 11: Implement Flask application factory with blueprints, authentication (local and OAuth), CSRF protection, and rate limiting
 - [x] Task 12: Implement API routes for rule management, tunnel status, agent enrollment, and system health endpoints
-- [ ] Task 13: Implement backup and restore functionality for encrypted configuration, state, and rule data
+- [x] Task 13: Implement backup and restore functionality for encrypted configuration, state, and rule data
 - [ ] Task 14: Implement multi-host agent support with key management, heartbeat monitoring, and remote container discovery

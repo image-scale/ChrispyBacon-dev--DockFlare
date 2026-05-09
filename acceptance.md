@@ -159,3 +159,16 @@
 - [x] POST /api/v1/agents/enroll enrolls new agents with API keys
 - [x] POST /api/v1/agents/<id>/heartbeat updates agent status
 - [x] GET /api/v1/system/info returns system information
+
+## Task 13: Backup and Restore (COMPLETED)
+
+### Acceptance Criteria
+- [x] BackupManager.create_backup creates backup with metadata
+- [x] Backups can be compressed with gzip
+- [x] Backups can be encrypted with password-derived keys
+- [x] BackupManager.restore_backup restores state from backup
+- [x] Restore fails gracefully with wrong password
+- [x] Restore supports merge mode vs replace mode
+- [x] Backups include checksum for integrity verification
+- [x] export_backup_to_file and import_backup_from_file work with files
+- [x] verify_backup validates backup without restoring

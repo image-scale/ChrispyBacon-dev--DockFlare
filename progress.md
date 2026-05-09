@@ -84,3 +84,10 @@
 **Commit**: Expand API routes with rule management, tunnel status, agent enrollment, and system health endpoints
 **Acceptance**: 10/10 criteria met
 **Verification**: tests FAIL on broken code (status returns BROKEN), PASS on current state
+
+## Round 13
+**Task**: Task 13 — Backup and restore
+**Files created**: src/dockflare/backup.py, tests/test_backup.py
+**Commit**: Add backup and restore functionality with encryption support
+**Acceptance**: 9/9 criteria met
+**Verification**: tests FAIL on broken code (restore returns False), PASS on current state
