@@ -13,3 +13,10 @@
 **Commit**: Add a Cloudflare API client that makes authenticated requests
 **Acceptance**: 10/10 criteria met
 **Verification**: tests FAIL on previous state (ImportError), PASS on current state
+
+## Round 3
+**Task**: Task 3 — Docker label parser
+**Files created**: src/dockflare/labels.py, tests/test_labels.py
+**Commit**: Add a Docker container label parser that extracts tunnel configuration
+**Acceptance**: 12/12 criteria met
+**Verification**: tests FAIL on previous state (ImportError), PASS on current state

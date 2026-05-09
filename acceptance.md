@@ -32,18 +32,30 @@
 - [x] list_zones() returns list of active zone IDs with names
 - [x] Zone ID cache expires after TTL and refreshes on next call
 
-## Task 3: Docker Label Parser
+## Task 3: Docker Label Parser (COMPLETED)
 
 ### Acceptance Criteria
-- [ ] extract_label(labels, "enable") returns label value using primary prefix "dockflare."
-- [ ] extract_label(labels, "enable") falls back to legacy prefix "cloudflare.tunnel."
-- [ ] extract_label with custom prefix checks custom prefix first
-- [ ] validate_hostname("api.example.com") returns True for valid hostnames
-- [ ] validate_hostname("*.example.com") returns True for wildcard hostnames
-- [ ] validate_hostname("-invalid.com") returns False for invalid hostnames
-- [ ] validate_service("http://app:8080") returns True for valid HTTP service URLs
-- [ ] validate_service("tcp://app:22") returns True for TCP protocol
-- [ ] validate_service("invalid") returns False for invalid service URLs
-- [ ] parse_container_labels extracts hostname, service, and access settings
-- [ ] parse_container_labels handles indexed labels (0.hostname, 1.hostname) for multiple routes
-- [ ] parse_container_labels returns empty list when enable=false
+- [x] extract_label(labels, "enable") returns label value using primary prefix "dockflare."
+- [x] extract_label(labels, "enable") falls back to legacy prefix "cloudflare.tunnel."
+- [x] extract_label with custom prefix checks custom prefix first
+- [x] validate_hostname("api.example.com") returns True for valid hostnames
+- [x] validate_hostname("*.example.com") returns True for wildcard hostnames
+- [x] validate_hostname("-invalid.com") returns False for invalid hostnames
+- [x] validate_service("http://app:8080") returns True for valid HTTP service URLs
+- [x] validate_service("tcp://app:22") returns True for TCP protocol
+- [x] validate_service("invalid") returns False for invalid service URLs
+- [x] parse_container_labels extracts hostname, service, and access settings
+- [x] parse_container_labels handles indexed labels (0.hostname, 1.hostname) for multiple routes
+- [x] parse_container_labels returns empty list when enable=false
+
+## Task 4: Tunnel Management
+
+### Acceptance Criteria
+- [ ] find_tunnel("my-tunnel") returns (tunnel_id, token) for existing tunnel
+- [ ] find_tunnel returns (None, None) for non-existent tunnel
+- [ ] create_tunnel("my-tunnel") creates tunnel and returns (tunnel_id, token)
+- [ ] get_tunnel_token(tunnel_id) retrieves tunnel connection token
+- [ ] get_tunnel_config(tunnel_id) returns current ingress configuration
+- [ ] update_tunnel_config(tunnel_id, ingress) updates tunnel ingress rules
+- [ ] build_ingress_entry creates proper ingress rule dict from route config
+- [ ] Ingress entries include hostname, service, and originRequest settings
