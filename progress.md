@@ -69,3 +69,10 @@
 **Commit**: Add cache layer with Redis and in-memory fallback
 **Acceptance**: 8/8 criteria met
 **Verification**: tests FAIL on broken code (get returns None), PASS on current state
+
+## Round 11
+**Task**: Task 11 — Flask application factory
+**Files created**: src/dockflare/app.py, src/dockflare/web/__init__.py, src/dockflare/web/routes.py, src/dockflare/web/api_routes.py, tests/test_app.py
+**Commit**: Add Flask application factory with authentication, CSRF, and rate limiting
+**Acceptance**: 9/9 criteria met
+**Verification**: tests FAIL on broken code (hash returns wrong value), PASS on current state

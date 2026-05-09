@@ -132,3 +132,16 @@
 - [x] CacheManager supports namespacing for different data types
 - [x] get_or_set returns cached value or computes and caches new value
 - [x] Module-level functions provide convenient access to zone and DNS caching
+
+## Task 11: Flask Application Factory (COMPLETED)
+
+### Acceptance Criteria
+- [x] create_app returns configured Flask application
+- [x] Application has secret key and secure session settings
+- [x] CSRF protection is enabled via Flask-WTF
+- [x] Rate limiting is enabled via Flask-Limiter
+- [x] User class supports password, OAuth, and API authentication methods
+- [x] Login manager loads users from session and request headers
+- [x] Web blueprint provides login, logout, and dashboard routes
+- [x] API blueprint provides status, health, and rules endpoints
+- [x] Disabled password login mode auto-authenticates users
