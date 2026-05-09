@@ -91,3 +91,10 @@
 **Commit**: Add backup and restore functionality with encryption support
 **Acceptance**: 9/9 criteria met
 **Verification**: tests FAIL on broken code (restore returns False), PASS on current state
+
+## Round 14
+**Task**: Task 14 — Multi-host agent support
+**Files created**: src/dockflare/agents.py, tests/test_agents.py
+**Commit**: Add multi-host agent support with key management and heartbeat monitoring
+**Acceptance**: 17/17 criteria met
+**Verification**: tests FAIL on broken code (verify_api_key returns False), PASS on current state

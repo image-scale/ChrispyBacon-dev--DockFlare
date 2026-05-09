@@ -172,3 +172,24 @@
 - [x] Backups include checksum for integrity verification
 - [x] export_backup_to_file and import_backup_from_file work with files
 - [x] verify_backup validates backup without restoring
+
+## Task 14: Multi-Host Agent Support (COMPLETED)
+
+### Acceptance Criteria
+- [x] AgentRegistry.enroll_agent returns agent_id and api_key tuple
+- [x] enroll_agent stores hashed API key, not plaintext
+- [x] AgentRegistry.verify_api_key validates API key correctly
+- [x] verify_api_key returns False for non-existent agents
+- [x] AgentRegistry.record_heartbeat updates agent status to active
+- [x] record_heartbeat updates container count and container list
+- [x] record_heartbeat triggers registered callbacks
+- [x] AgentRegistry.list_agents filters by status and inactive flag
+- [x] AgentRegistry.delete_agent removes agent from registry
+- [x] AgentRegistry.rotate_api_key generates new key and invalidates old
+- [x] AgentRegistry.check_timeouts marks inactive agents past timeout
+- [x] HeartbeatMonitor starts and stops background monitoring thread
+- [x] HeartbeatMonitor calls timeout callbacks when agents time out
+- [x] ContainerDiscovery.process_agent_containers extracts routes from containers
+- [x] ContainerDiscovery.get_all_routes returns routes from all agents
+- [x] ContainerDiscovery.clear_agent_routes removes routes for an agent
+- [x] Module-level convenience functions delegate to singleton registry
