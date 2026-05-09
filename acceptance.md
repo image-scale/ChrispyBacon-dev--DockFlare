@@ -106,3 +106,17 @@
 - [x] start_event_listener starts background thread for Docker events
 - [x] Event listener stops gracefully when stop_event is set
 - [x] Handlers continue execution even if one handler raises exception
+
+## Task 9: Reconciliation Engine (COMPLETED)
+
+### Acceptance Criteria
+- [x] ReconciliationResult tracks created, updated, deleted, and restored rules
+- [x] Reconciler.reconcile creates new rules from routes
+- [x] Reconciler.reconcile updates rules when service or settings change
+- [x] Reconciler skips manual rules to avoid overwriting them
+- [x] Reconciler restores rules marked for deletion when container restarts
+- [x] Reconciler marks missing rules for deletion with grace period
+- [x] Reconciler saves state after making changes
+- [x] cleanup_expired_rules removes rules past their deletion time
+- [x] ReconciliationRunner runs periodic reconciliation in background
+- [x] ReconciliationRunner can be manually triggered
