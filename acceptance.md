@@ -71,14 +71,38 @@
 - [x] Record is created with proxied=true and TTL=1 (auto)
 - [x] Returns record ID on successful creation
 
-## Task 6: State Manager
+## Task 6: State Manager (COMPLETED)
 
 ### Acceptance Criteria
-- [ ] save_state persists rules, access groups, and agents to JSON file
-- [ ] load_state reads and populates state from JSON file
-- [ ] State includes managed_rules dict keyed by hostname|path
-- [ ] State includes access_groups dict keyed by group ID
-- [ ] State includes agents dict keyed by agent ID
-- [ ] State can be accessed via thread-safe get/set operations
-- [ ] load_state handles missing file gracefully (empty state)
-- [ ] State file path is configurable via settings
+- [x] save_state persists rules, access groups, and agents to JSON file
+- [x] load_state reads and populates state from JSON file
+- [x] State includes managed_rules dict keyed by hostname|path
+- [x] State includes access_groups dict keyed by group ID
+- [x] State includes agents dict keyed by agent ID
+- [x] State can be accessed via thread-safe get/set operations
+- [x] load_state handles missing file gracefully (empty state)
+- [x] State file path is configurable via settings
+
+## Task 7: Cloudflare Access Manager (COMPLETED)
+
+### Acceptance Criteria
+- [x] AccessManager.find_application finds app by domain
+- [x] AccessManager.create_application creates Access application
+- [x] AccessManager.update_application updates existing application
+- [x] AccessManager.delete_application removes application
+- [x] build_bypass_policy creates bypass policy with everyone rule
+- [x] build_allow_policy creates allow policy with email/domain rules
+- [x] Module-level convenience functions use default manager
+
+## Task 8: Docker Event Handler (COMPLETED)
+
+### Acceptance Criteria
+- [x] ContainerEvent class represents Docker container events
+- [x] DockerEventHandler.on_start registers start event handlers
+- [x] DockerEventHandler.on_stop registers stop/die event handlers
+- [x] handle_event parses labels and calls appropriate handlers
+- [x] process_docker_event converts Docker SDK event format to ContainerEvent
+- [x] scan_existing_containers processes running containers on startup
+- [x] start_event_listener starts background thread for Docker events
+- [x] Event listener stops gracefully when stop_event is set
+- [x] Handlers continue execution even if one handler raises exception
