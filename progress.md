@@ -76,3 +76,11 @@
 **Commit**: Add Flask application factory with authentication, CSRF, and rate limiting
 **Acceptance**: 9/9 criteria met
 **Verification**: tests FAIL on broken code (hash returns wrong value), PASS on current state
+
+## Round 12
+**Task**: Task 12 — API routes
+**Files modified**: src/dockflare/web/api_routes.py
+**Files created**: tests/test_api_routes.py
+**Commit**: Expand API routes with rule management, tunnel status, agent enrollment, and system health endpoints
+**Acceptance**: 10/10 criteria met
+**Verification**: tests FAIL on broken code (status returns BROKEN), PASS on current state

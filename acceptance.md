@@ -145,3 +145,17 @@
 - [x] Web blueprint provides login, logout, and dashboard routes
 - [x] API blueprint provides status, health, and rules endpoints
 - [x] Disabled password login mode auto-authenticates users
+
+## Task 12: API Routes (COMPLETED)
+
+### Acceptance Criteria
+- [x] GET /api/v1/status returns API status with version and timestamp
+- [x] GET /api/v1/health returns health check with component checks
+- [x] GET /api/v1/rules lists all managed rules with filtering
+- [x] POST /api/v1/rules creates new manual rules
+- [x] DELETE /api/v1/rules/<key> deletes rules
+- [x] GET /api/v1/tunnel/status returns tunnel connection status
+- [x] GET /api/v1/agents lists registered agents
+- [x] POST /api/v1/agents/enroll enrolls new agents with API keys
+- [x] POST /api/v1/agents/<id>/heartbeat updates agent status
+- [x] GET /api/v1/system/info returns system information
