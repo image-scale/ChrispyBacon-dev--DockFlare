@@ -120,3 +120,15 @@
 - [x] cleanup_expired_rules removes rules past their deletion time
 - [x] ReconciliationRunner runs periodic reconciliation in background
 - [x] ReconciliationRunner can be manually triggered
+
+## Task 10: Cache Layer (COMPLETED)
+
+### Acceptance Criteria
+- [x] MemoryCache stores values with TTL-based expiration
+- [x] MemoryCache evicts expired entries before oldest when full
+- [x] RedisCache connects to Redis and stores JSON-serialized values
+- [x] RedisCache handles connection failures gracefully
+- [x] CacheManager falls back to memory when Redis unavailable
+- [x] CacheManager supports namespacing for different data types
+- [x] get_or_set returns cached value or computes and caches new value
+- [x] Module-level functions provide convenient access to zone and DNS caching
