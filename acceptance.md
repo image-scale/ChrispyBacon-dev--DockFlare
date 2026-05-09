@@ -48,14 +48,25 @@
 - [x] parse_container_labels handles indexed labels (0.hostname, 1.hostname) for multiple routes
 - [x] parse_container_labels returns empty list when enable=false
 
-## Task 4: Tunnel Management
+## Task 4: Tunnel Management (COMPLETED)
 
 ### Acceptance Criteria
-- [ ] find_tunnel("my-tunnel") returns (tunnel_id, token) for existing tunnel
-- [ ] find_tunnel returns (None, None) for non-existent tunnel
-- [ ] create_tunnel("my-tunnel") creates tunnel and returns (tunnel_id, token)
-- [ ] get_tunnel_token(tunnel_id) retrieves tunnel connection token
-- [ ] get_tunnel_config(tunnel_id) returns current ingress configuration
-- [ ] update_tunnel_config(tunnel_id, ingress) updates tunnel ingress rules
-- [ ] build_ingress_entry creates proper ingress rule dict from route config
-- [ ] Ingress entries include hostname, service, and originRequest settings
+- [x] find_tunnel("my-tunnel") returns (tunnel_id, token) for existing tunnel
+- [x] find_tunnel returns (None, None) for non-existent tunnel
+- [x] create_tunnel("my-tunnel") creates tunnel and returns (tunnel_id, token)
+- [x] get_tunnel_token(tunnel_id) retrieves tunnel connection token
+- [x] get_tunnel_config(tunnel_id) returns current ingress configuration
+- [x] update_tunnel_config(tunnel_id, ingress) updates tunnel ingress rules
+- [x] build_ingress_entry creates proper ingress rule dict from route config
+- [x] Ingress entries include hostname, service, and originRequest settings
+
+## Task 5: DNS Record Management
+
+### Acceptance Criteria
+- [ ] create_dns_record creates CNAME record pointing to tunnel
+- [ ] find_dns_record finds existing CNAME for hostname in zone
+- [ ] update_dns_record updates existing record to point to correct tunnel
+- [ ] delete_dns_record removes DNS record by ID
+- [ ] DNS content format is "{tunnel_id}.cfargotunnel.com"
+- [ ] Record is created with proxied=true and TTL=1 (auto)
+- [ ] Returns record ID on successful creation

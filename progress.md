@@ -20,3 +20,10 @@
 **Commit**: Add a Docker container label parser that extracts tunnel configuration
 **Acceptance**: 12/12 criteria met
 **Verification**: tests FAIL on previous state (ImportError), PASS on current state
+
+## Round 4
+**Task**: Task 4 — Tunnel management
+**Files created**: src/dockflare/tunnels.py, tests/test_tunnels.py
+**Commit**: Add tunnel management functionality for Cloudflare Tunnels
+**Acceptance**: 8/8 criteria met
+**Verification**: tests FAIL on previous state (ImportError), PASS on current state
